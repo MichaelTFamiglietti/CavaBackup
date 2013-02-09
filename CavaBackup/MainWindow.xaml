@@ -1,0 +1,35 @@
+﻿<Window x:Class="CavaBackup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cava Backup" Height="198" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="441,0,0,0" Name="textVersion" VerticalAlignment="Top" Width="77" />
+        <TabControl Height="169" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="520">
+            <TabItem Header="Backup" Name="tabMain">
+                <Grid>
+                    <Label Content="Folder" HorizontalAlignment="Left" Margin="9,-1,0,102" Name="label1" Width="60" />
+                    <Label Content="to backup" Height="28" HorizontalAlignment="Left" Margin="0,12,0,0" Name="label2" VerticalAlignment="Top" Width="72" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="66,12,0,0" Name="textFolderToBackup" VerticalAlignment="Top" Width="357" Text="" TextChanged="textFolderToBackup_TextChanged" />
+                    <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="434,12,0,0" Name="buttonBrowse" VerticalAlignment="Top" Width="75" Click="buttonBrowse_Click" />
+
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="66,46,0,0" Name="textNickname" VerticalAlignment="Top" Width="357" TextChanged="textNickname_TextChanged" />
+                    <Label Content="Nickname" Height="28" HorizontalAlignment="Left" Margin="0,44,0,0" Name="label3" VerticalAlignment="Top" />
+
+                    <Button Content="Back up your files!" Height="46" HorizontalAlignment="Left" Margin="392,77,0,0" Name="buttonBackup" VerticalAlignment="Top" Width="107" Click="buttonBackup_Click" />
+                    <TextBox Height="53" HorizontalAlignment="Left" Margin="9,78,0,0" Name="textConsole" VerticalAlignment="Top" Width="376" AcceptsTab="True" AcceptsReturn="True" IsReadOnly="True" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Settings" Name="tabSettings">
+                <Grid>
+                    <CheckBox Content="Open folder after backup" Height="16" HorizontalAlignment="Left" Margin="15,9,0,0" Name="checkOpenFolder" VerticalAlignment="Top" Checked="checkOpenFolder_Checked" />
+                    <CheckBox Content="Compress Backups" Height="16" HorizontalAlignment="Left" Margin="15,27,0,0" Name="checkCompress" VerticalAlignment="Top" Checked="checkCompress_Checked" />
+                    
+                    <TextBox Height="24" HorizontalAlignment="Left" Margin="128,52,0,0" Name="textBackupLocation" VerticalAlignment="Top" Width="365" TextChanged="textBackupLocation_TextChanged" />
+                    <Label Content="Location of backup" HorizontalAlignment="Left" Margin="16,49,0,61" Name="label5" />
+                
+                    <Button Content="Apply Changes" Height="23" HorizontalAlignment="Left" Margin="386,107,0,0" Name="buttonApply" VerticalAlignment="Top" Width="116" IsEnabled="False" Click="buttonApply_Click" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
